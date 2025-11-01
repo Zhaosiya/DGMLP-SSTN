@@ -2,8 +2,6 @@
 
 
 
-<p align="center"><img src="figure/model.png" width="100%" alt="" /></p>
-
 ## Installation
 
 DGMLP-SSTN is tested on Ubuntu 18 with Pytorch 1.7.1 and Python 3.9. 
