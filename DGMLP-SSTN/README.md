@@ -6,8 +6,8 @@
 
 ## Installation
 
-GraphMLP is tested on Ubuntu 18 with Pytorch 1.7.1 and Python 3.9. 
-- Create a conda environment: ```conda create -n graphmlp python=3.9```
+DGMLP-SSTN is tested on Ubuntu 18 with Pytorch 1.7.1 and Python 3.9. 
+- Create a conda environment: ```conda create -n DGMLP-SSTN python=3.9```
 - Install PyTorch 2.2.2 and Torchvision 0.17.2 following the [official instructions](https://pytorch.org/)
 - ```pip3 install -r requirements.txt```
   
@@ -28,7 +28,7 @@ ${POSE_ROOT}/
 
 ## Train the model
 
-To train a 1-frame GraphMLP model on Human3.6M:
+To train a 1-frame DGMLP-SSTN model on Human3.6M:
 
 ```bash
 # Train from scratch
@@ -40,19 +40,19 @@ python main.py  --batch_size 256 --refine --lr 1e-5 --previous_dir [your best mo
 
 ## Test the model
 
-To test a 1-frame GraphMLP model:
+To test a 1-frame DGMLP-SSTN model:
 
 ```bash
 # Human3.6M
-python main.py --test --previous_dir 'checkpoint/pretrained/1' 
+python main.py --test --previous_dir '[your best model saved path]' 
 
 # MPI-INF-3DHP
-python main.py --test --previous_dir 'checkpoint/pretrained/1'  --dataset '3dhp'
+python main.py --test --previous_dir '[your best model saved path]'  --dataset '3dhp'
 ```
 
 To test a 1-frame GraphMLP model with refine module on Human3.6M:
 ```bash
-python main.py --test --previous_dir 'checkpoint/pretrained/1/refine' --refine 
+python main.py --test --previous_dir '[your best model saved path]' --refine 
 ```
 
 
@@ -87,12 +87,12 @@ Sample demo output:
 
 If you find our work useful in your research, please consider citing:
 
-    @article{li2024graphmlp,
-      title={GraphMLP: A graph MLP-like architecture for 3D human pose estimation},
-      author={Li, Wenhao and Liu, Mengyuan and Liu, Hong and Guo, Tianyu and Wang, Ti and Tang, Hao and Sebe, Nicu},
-      journal={Pattern Recognition},
-      pages={110925},
-      year={2024},
+    @article{zhao2025dgmlpsstn},
+      title={DGMLP-SSTN: Enhanced 3D Human Pose Estimation via Dynamic Graph MLP with Spatial Self-Transform},
+      author={Zhang, Xiaoli and Zhao, Siya and Zhu, Guifu and Wang, Sicui and Yang, Yunfei},
+      journal={},
+      pages={},
+      year={2025}
     }
 
 ## Acknowledgement
